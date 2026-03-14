@@ -44,6 +44,27 @@ lvgl:
       widgets:     
 
         # Movie Scene
+        # - button: 
+        #     height: $button_height
+        #     width: $button_width
+        #     checkable: true
+        #     id: living_room_sofa_light_button
+        #     styles: control
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           id: living_room_sofa_icon                
+        #           text: $led_strip_variant
+        #       - label:
+        #           align: bottom_left
+        #           id: living_room_sofa_label
+        #           text: "Movie Light"
+        #     on_press:
+        #       - homeassistant.service:
+        #           service: switch.toggle
+        #           data:
+        #             entity_id: switch.living_room_sofa_light
         - button: 
             height: $button_height
             width: $button_width
@@ -60,10 +81,9 @@ lvgl:
                   align: bottom_left
                   id: living_room_sofa_label
                   text: "Movie Light"
-            on_press:
+            on_click:
               - homeassistant.service:
                   service: switch.toggle
                   data:
                     entity_id: switch.living_room_sofa_light
-
        
