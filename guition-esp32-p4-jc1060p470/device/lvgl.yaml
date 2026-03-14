@@ -5,15 +5,15 @@ lvgl:
   top_layer:
     widgets:
     
-      # Temperature
-      - label:
-          text: "-° / -°"
-          id: temperatures
-          text_font: clockbar_font
-          align: top_left
-          x: 8
-          y: 8
-          text_color: 0xFFFFFF
+      # # Temperature
+      # - label:
+      #     text: "-° / -°"
+      #     id: temperatures
+      #     text_font: clockbar_font
+      #     align: top_left
+      #     x: 8
+      #     y: 8
+      #     text_color: 0xFFFFFF
 
       # Clock
       - label:
@@ -86,4 +86,6 @@ lvgl:
                   service: switch.toggle
                   data:
                     entity_id: switch.living_room_sofa_light
-       
+        - label:
+          id: liam_bedroom_temperature
+          text: "-- °C"

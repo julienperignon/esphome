@@ -1,4 +1,15 @@
 sensor:
+
+  - platform: homeassistant
+    entity_id: sensor.liam_bedroom_temperature
+    id: office_temperature
+    on_value:
+      - lvgl.label.update:
+          id: liam_bedroom_temperature
+          text:
+            format: "%d° / %d°"
+            args: [ '(int)round(id(outdoor_temperature).state)', '(int)round(x)' ]
+
 switch:
 
   # Movie Light
