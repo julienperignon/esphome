@@ -43,7 +43,7 @@ lvgl:
       
       widgets:     
 
-        # Office Calls Scene
+        # Movie Scene
         - button: 
             height: $button_height
             width: $button_width
@@ -59,11 +59,11 @@ lvgl:
               - label:
                   align: bottom_left
                   id: living_room_sofa_label
-                  text: "Calls"
+                  text: "Movie Light"
             on_press:
               - homeassistant.service:
                   service: switch.toggle
                   data:
-                    entity_id: switch.living_room_sofa_light
+                    entity_id: switch.smart_plug_2
 
        
