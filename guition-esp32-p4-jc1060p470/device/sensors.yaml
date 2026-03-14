@@ -5,14 +5,14 @@ text_sensor:
     entity_id: sensor.liam_bedroom_temperature
     on_value:
       - lvgl.label.update:
-          id: liam_bedroom_temperature_label
+          id: liam_bedroom_temperature_value_label
           text: !lambda |-
             if (x.empty() || x == "unknown" || x == "unavailable") {
               return std::string("--");
             }
             return x;
       - lvgl.label.update:
-          id: liam_bedroom_temperature_label
+          id: liam_bedroom_temperature_unit_label
           text: "°C"
 
 switch:

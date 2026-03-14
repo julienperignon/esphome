@@ -115,11 +115,11 @@ lvgl:
                     flex_align_track: start
                   widgets:
                     - label:
-                        id: temp_value_label
+                        id: liam_bedroom_temperature_value_label
                         text: "--"
                         text_font: montserrat_32
                     - label:
-                        id: liam_bedroom_temperature_label
+                        id: liam_bedroom_temperature_unit_label
                         text: "°C"
                         text_font: montserrat_18
                         pad_left: 4
