@@ -64,6 +64,6 @@ lvgl:
               - homeassistant.service:
                   service: switch.toggle
                   data:
-                    entity_id: switch.smart_plug_2
+                    entity_id: switch.living_room_sofa_light
 
        
