@@ -87,5 +87,5 @@ lvgl:
                   data:
                     entity_id: switch.living_room_sofa_light
         - label:
-          id: liam_bedroom_temperature
-          text: "-- °C"
+            id: liam_bedroom_temperature
+            text: "-- °C"
