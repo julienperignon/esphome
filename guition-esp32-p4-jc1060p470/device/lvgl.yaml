@@ -81,14 +81,9 @@ lvgl:
                   align: bottom_left
                   id: living_room_sofa_label
                   text: "Movie Light"
-                  on_click:
-                    - logger.log: "living_room_sofa_light button clicked"
-                    - homeassistant.action:
-                        action: switch.toggle
-                        data:
-                          entity_id: switch.living_room_sofa_light
-                        on_success:
-                          - logger.log: "living_room_sofa_light toggle success"
-                        on_error:
-                          - logger.log: "living_room_sofa_light toggle failed"
+            on_press:
+              - homeassistant.service:
+                  service: switch.toggle
+                  data:
+                    entity_id: switch.living_room_sofa_light
        
