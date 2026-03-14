@@ -82,6 +82,7 @@ lvgl:
                   id: living_room_sofa_label
                   text: "Movie Light"
             on_click:
+              - logger.log: "living_room_sofa_light button clicked"
               - homeassistant.service:
                   service: switch.toggle
                   data:
