@@ -8,7 +8,7 @@ sensor:
           id: liam_bedroom_temperature
           text:
             format: "%d° / %d°"
-            args: [ '(int)round(id(outdoor_temperature).state)', '(int)round(x)' ]
+            args: [ '(int)round(id(liam_bedroom_temperature).state)', '(int)round(x)' ]
 
 switch:
 
