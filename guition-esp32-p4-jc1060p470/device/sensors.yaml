@@ -1,14 +1,5 @@
 sensor:
-binary_sensor:
-
-  # Movie Light
+switch:
   - platform: homeassistant
-    id: living_room_sofa_light
+    id: ha_living_room_sofa_light
     entity_id: switch.living_room_sofa_light
-    trigger_on_initial_state: true
-    on_state:
-      then:
-        lvgl.widget.update:
-          id: living_room_sofa_light_button
-          state:
-            checked: !lambda return x;

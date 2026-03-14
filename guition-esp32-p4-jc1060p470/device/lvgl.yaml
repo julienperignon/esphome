@@ -83,12 +83,5 @@ lvgl:
                   text: "Movie Light"
             on_click:
               - logger.log: "living_room_sofa_light button clicked"
-              - homeassistant.action:
-                  action: switch.toggle
-                  data:
-                    entity_id: switch.living_room_sofa_light
-                  on_success:
-                    - logger.log: "HA toggle action succeeded"
-                  on_error:
-                    - logger.log: "HA toggle action failed"
+              - switch.toggle: ha_living_room_sofa_light
        
