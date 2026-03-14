@@ -1,14 +1,19 @@
 sensor:
-
+text_sensor:
   - platform: homeassistant
+    id: liam_bedroom_temperature_text
     entity_id: sensor.liam_bedroom_temperature
-    id: office_temperature
     on_value:
       - lvgl.label.update:
-          id: liam_bedroom_temperature
-          text:
-            format: "%d° / %d°"
-            args: [ '(int)round(id(liam_bedroom_temperature).state)', '(int)round(x)' ]
+          id: liam_bedroom_temperature_label
+          text: !lambda |-
+            if (x.empty() || x == "unknown" || x == "unavailable") {
+              return std::string("--");
+            }
+            return x;
+      - lvgl.label.update:
+          id: liam_bedroom_temperature_label
+          text: "°C"
 
 switch:
 
