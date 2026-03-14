@@ -64,8 +64,8 @@ lvgl:
                   data:
                     entity_id: switch.living_room_sofa_light
         - obj:
-            width: 300px
-            height: $button_width
+            width: $button_width
+            height: 150px
             radius: 8px
             pad_all: 14px
             styles: control
