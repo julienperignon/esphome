@@ -65,14 +65,14 @@ lvgl:
                     entity_id: switch.living_room_sofa_light
         - obj:
             width: $button_width
-            height: 150px
-            radius: 8px
-            pad_all: 14px
+            height: $button_height
+            radius: $radius
+            pad_all: $padding
             styles: control
             layout:
               type: flex
               flex_flow: column
-              flex_align_main: center
+              flex_align_main: start
               flex_align_cross: start
               flex_align_track: start
             widgets:
@@ -80,6 +80,7 @@ lvgl:
                   id: liam_bedroom_temperature_title
                   text: "Liam's Room"
                   text_font: montserrat_16
+                  text_color: 0xFFFFFF
               - obj:
                   width: 100%
                   bg_opa: TRANSP
