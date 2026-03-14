@@ -49,6 +49,20 @@ ota:
 
 # Enable Home Assistant API
 api:
+  on_client_connected:
+    - if:
+        condition:
+          switch.is_on: ha_living_room_sofa_light
+        then:
+          - lvgl.widget.update:
+              id: living_room_sofa_light_button
+              state:
+                checked: true
+        else:
+          - lvgl.widget.update:
+              id: living_room_sofa_light_button
+              state:
+                checked: false
 
 # Enable logging
 logger:
