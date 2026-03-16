@@ -1,19 +1,5 @@
 sensor:
 
-binary_sensor:
-  - platform: homeassistant
-    id: living_room_sofa_light_state
-    entity_id: switch.living_room_sofa_light
-    trigger_on_initial_state: true
-    on_state:
-      then:
-        - lvgl.widget.update:
-            id: living_room_sofa_light_button
-            bg_color: !lambda return x ? lv_color_hex(0x2F7D32) : lv_color_hex(0x2C2C2C);
-        - lvgl.label.update:
-            id: living_room_sofa_label
-            text: !lambda return x ? std::string("Movie Light ON") : std::string("Movie Light");
-
 text_sensor:
   - platform: homeassistant
     id: liam_bedroom_temperature_text
@@ -34,9 +20,15 @@ switch:
   - platform: homeassistant
     id: living_room_sofa_light
     entity_id: switch.living_room_sofa_light
-    on_state:
+    on_turn_on:
       then:
         - lvgl.widget.update:
             id: living_room_sofa_light_button
             state:
-              checked: !lambda return x;
+              checked: true
+    on_turn_off:
+      then:
+        - lvgl.widget.update:
+            id: living_room_sofa_light_button
+            state:
+              checked: false
