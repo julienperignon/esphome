@@ -21,9 +21,9 @@ switch:
   - platform: homeassistant
     id: living_room_sofa_light
     entity_id: switch.living_room_sofa_light
-    on_state:
-      then:
-        lvgl.widget.update:
-          id: living_room_sofa_light_button
-          state:
-            checked: !lambda return x;
+    # on_state:
+    #   then:
+    #     lvgl.widget.update:
+    #       id: living_room_sofa_light_button
+    #       state:
+    #         checked: !lambda return x;
